@@ -1,5 +1,5 @@
 /*****************************************************************************
- *                         REGULAR EXPRESSIONS                               *
+ *                     CLASS 01: REGULAR EXPRESSIONS                         *
  *****************************************************************************
  * Author: Almério José Venâncio Pains Soares Pamplona                       *
  * E-mail: almeriopamplona@gmail.com                                         *
