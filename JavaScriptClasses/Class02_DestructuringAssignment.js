@@ -1,5 +1,5 @@
 /*****************************************************************************
- *                         REGULAR EXPRESSIONS                               *
+ *                    CLASS 02: DESTRUCTING ASSIGNMENT                       *
  *****************************************************************************
  * Author: Almério José Venâncio Pains Soares Pamplona                       *
  * E-mail: almeriopamplona@gmail.com                                         *
