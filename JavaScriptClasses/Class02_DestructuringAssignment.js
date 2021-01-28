@@ -21,7 +21,7 @@
  * syntax:                                                                   *
  *                                                                           *
  *   const { name, age } = user;                                             *
- *	 // name = 'John Doe', age = 34                                          *
+ *	 // name = 'John Doe', age = 34                                           *
  *                                                                           *
  * Here, the name and age variables will be created and assigned the values  *
  * of their respective values from the user object. You can see  how much    *
