@@ -1,5 +1,5 @@
 /*****************************************************************************
- *                         CLASS 04: CLASS SYNTAX                            *
+ *                         CLASS 05: CLASS SYNTAX                            *
  *****************************************************************************
  * Author: Almério José Venâncio Pains Soares Pamplona                       *
  * E-mail: almeriopamplona@gmail.com                                         *
