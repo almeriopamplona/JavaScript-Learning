@@ -3,7 +3,8 @@
  *****************************************************************************
  * Author: Almério José Venâncio Pains Soares Pamplona                       *
  * E-mail: almeriopamplona@gmail.com                                         *
- * Date  : 26.09.2020                                                        *
+ *****************************************************************************
+ * Reference: https://www.freecodecamp.org/learn/                            *
  *****************************************************************************
  * ES6 makes destructuring arrays as easy as destructuring objects           *
  *                                                                           *
