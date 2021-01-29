@@ -3,7 +3,8 @@
  *****************************************************************************
  * Author: Almério José Venâncio Pains Soares Pamplona                       *
  * E-mail: almeriopamplona@gmail.com                                         *
- * Date  : 26.09.2020                                                        *
+ *****************************************************************************
+ * Reference: https://www.freecodecamp.org/learn/                            *
  *****************************************************************************
  *                                                                           *
  * ES6: Use Destructuring Assignment to Pass an Object as a Function's       *
