@@ -25,8 +25,6 @@ let testArr = ['eye', '_eye', 'race car', 'not a palindrome',
     'almostomla', 'My age is 0, 0 si ega ym.', '0_0 (: /-\\ :) 0-0', 
     'five|\\_/|four'];
 
-
 console.log('\nPALINDROME CHECKER--------------------------------------\n');
-
 
 console.log(testArr.map(arr => palindrome(arr)));
