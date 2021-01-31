@@ -1,4 +1,9 @@
 /*****************************************************************************
+ * Author: Almério José Venâncio Pains Soares Pamplona                       *
+ * E-mail: almeriopamplona@gmail.com                                         *
+ *****************************************************************************
+ * Reference: https://www.freecodecamp.org/learn/                            *
+ *****************************************************************************
  * CAESARS CIPHER                                                            *
  *                                                                           *
  * One of the simplest and most widely known ciphers is a Caesar cipher,     * 
