@@ -1,6 +1,9 @@
-
-//----------------------------------------------------------- //
-
+/*****************************************************************************
+ * Author: Almério José Venâncio Pains Soares Pamplona                       *
+ * E-mail: almeriopamplona@gmail.com                                         *
+ *****************************************************************************
+ * Reference: https://www.freecodecamp.org/learn/                            *
+ *****************************************************************************/
 function truncateString(str, num) 
 {
   if (num < str.length)
@@ -17,13 +20,11 @@ function truncateString(str, num)
   {
     return str;
   }
-  
 }
 
 console.log(truncateString("A-tisket a-tasket A green and"+" yellow basket", 8))
 
-//----------------------------------------------------------- //
-
+/******************************************************************************/
 function findElement(arr, func) 
 {
   let num = 0;
@@ -40,8 +41,7 @@ function findElement(arr, func)
 
 console.log(findElement([1, 2, 3, 4], num => num % 2 === 0));
 
-//----------------------------------------------------------- //
-
+/******************************************************************************/
 function titleCase(str) 
 {
  /* lowercase every word of the sentence: */
@@ -97,8 +97,7 @@ function titleCase(str)
 
 console.log(titleCase("I'm a little tea pot"));
 
-//----------------------------------------------------------- //
-
+/******************************************************************************/
 function frankenSplice(arr1, arr2, n) 
 {
   let arr =[];
@@ -129,8 +128,7 @@ function frankenSplice(arr1, arr2, n)
 
 console.log(frankenSplice([1, 2, 3], [4, 5, 6], 1));
 
-//----------------------------------------------------------- //
-
+/******************************************************************************/
 function bouncer(arr)
 {
   let arr1 = [];
@@ -147,8 +145,7 @@ function bouncer(arr)
 
 console.log(bouncer([7, "ate", "", false, 9]));
 
-//----------------------------------------------------------- //
-
+/******************************************************************************/
 function getIndexToIns(arr, num) 
 {  
   arr.sort(function(a, b){return a-b});
@@ -170,14 +167,12 @@ function getIndexToIns(arr, num)
       position = i + 2;
     }
   };
-
   return position;
 }
 
 console.log(getIndexToIns([2, 5, 10], 15));
 
-//----------------------------------------------------------- //
-
+/******************************************************************************/
 function mutation(arr) 
 {  
   let arr1 = arr[0];
@@ -208,15 +203,15 @@ function mutation(arr)
 
 console.log(mutation(["Noel", "Ole"]));
 
-//----------------------------------------------------------- //
-
+/******************************************************************************/
 function chunkArrayInGroups(arr, size) 
 {
   let arr1 = [];
   let arr2 = [];
-  // Define the number of rows of the new array:
+  /* Define the number of rows of the new array: */
   let m = Math.ceil(arr.length/size);
-  // Initialize the index to walk through arr:
+  
+  /* Initialize the index to walk through arr: */
   let n = 0;
   
   for(let i = 0; i < m; i++)
