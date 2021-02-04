@@ -1,14 +1,18 @@
-/* ---------------------------------------------------------
-INTERMEDIATE ALGORITHM SCRIPTING: SUM ALL NUMBERS IN A 
-RANGE
-
-We will pass you an array of two numbers. Return the sum 
-of those two numbers plus the sum of all numbers between 
-them. The lowest number will not always com first.
-
-For example, sumAll([4,1]) should return 10 because sum of 
-all the numbers between 1 and 4 (both inclusive) is 10
---------------------------------------------------------- */
+/*****************************************************************************
+ * Author: Almério José Venâncio Pains Soares Pamplona                       *
+ * E-mail: almeriopamplona@gmail.com                                         *
+ *****************************************************************************
+ * Reference: https://www.freecodecamp.org/learn/                            *
+ *****************************************************************************
+ * INTERMEDIATE ALGORITHM SCRIPTING: SUM ALL NUMBERS IN A RANGE              *
+ *                                                                           *
+ * We will pass you an array of two numbers. Return the sum of those two     *
+ * numbers plus the sum of all numbers between them. The lowest number will  *
+ * not always com first.                                                     *
+ *                                                                           *
+ * For example, sumAll([4,1]) should return 10 because sum of all the numbers*
+ * between 1 and 4 (both inclusive) is 10                                    *
+ *****************************************************************************/
 
 // first solution:
 
