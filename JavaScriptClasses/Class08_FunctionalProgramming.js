@@ -1,99 +1,97 @@
-/* ---------------------------------------------------------
-	FUNCTIONAL PROGRAMMING
+/*****************************************************************************
+ * Author: Almério José Venâncio Pains Soares Pamplona                       *
+ * E-mail: almeriopamplona@gmail.com                                         *
+ *****************************************************************************
+ * Reference: https://www.freecodecamp.org/learn/                            *
+ *****************************************************************************
+ * FUNCTIONAL PROGRAMMING                                                    *
+ *                                                                           *
+ * Functional programming is a style programming where solutions are simple, *
+ * isolated funcitons, without any side effects outside of the scope.        *
+ *                                                                           *
+ *     INPUT -> PROCESS -> OUTPUT                                            *
+ *                                                                           *
+ * Functional programming is about:                                          *
+ *                                                                           *
+ *   1) Isolated functions - there is no dependece on the state of the       * 
+ *      program, which includes global variables that are subjects to change;*
+ *                                                                           *
+ *   2) Pure functions - the same input always gives the same output;        *
+ *                                                                           *
+ *   3) Functions with limited side effects - any changes, or mutations, to  *
+ *      the state of the program outside the function are careffully         * 
+ *      controlled                                                           *
+ *****************************************************************************
+ * Function that returns a string representing a cup of green tea            * 
+ * (inline function ) const prepareTea = () => 'greenTea';                   *                     
+ *                                                                           *  
+ * Give a function (representing the tea type) and number of cups needed,    *
+ * the following function returns an array of strings (each representing a   *
+ * cup of a specific type of tea).                                           *
+ *                                                                           */
 
-	finctional programming is a style programming where
-	solutions are simple, isolated funcitons, without any
-	side effects outside of the scope.
+const getTea = (numOfCups) => {                                      
+    const teaCups = [];                                             
+                                                                            
+    for(let cups = 1; cups <= numOfCups; cups++)                     
+    {
+        const teaCup = prepareTea();                                
+	teaCups.push(teaCup);                                        
+    }                                                                
+ 	                                                                     
+    return teaCups;                                                  
+}                                                                    
+                                                                            
+/* Now we call getTea funcution to get 40 cups of tea for the team, and store* 
+ * them in the tea4TeamFCC variable.                                         */
 
-	INPUT -> PROCESS -> OUTPUT
-
-	Functional programming is about:
-
-	1) Isolated functions - there is no dependece on the 
-	state of the program, which includes global variables
-	that are subjects to change;
-
-	2) Pure functions - the same input always gives the
-	same output;
-
-	3) Functions with limited side effects - any changes,
-	or mutations, to the state of the program outside the 
-	function are careffully controlled
---------------------------------------------------------- */
-// Function that returns a string representing a cup of   //
-// green tea (inline function )                           //
-const prepareTea = () => 'greenTea';                      
-                                                          
-// Give a function (representing the tea type) and number //
-// of cups needed, the following function returns an ar-  //
-// ray of strings (each representing a cup of a specific  //
-// type of tea).                                          //
-
-const getTea = (numOfCups) => {
-	const teaCups = [];
-
-	for(let cups = 1; cups <= numOfCups; cups++) {
-		const teaCup = prepareTea();
-		teaCups.push(teaCup);
-	}
-	return teaCups;
-}
-
-// Now we call getTea funcution to get 40 cups of tea for //
-// the team, and store them in the tea4TeamFCC variable.  //
-
-const tea4TeamFCC = getTea(40);
-
-console.log(tea4TeamFCC);
-
-/* ---------------------------------------------------------
-	FUNCTIONAL PROGRAMMING: UNDERSTAND FP TERMINOLAGY
-
-	The FCC Team had a mood swing and now wants two types
-	of tea: green tea and black tea. General Fact: Client
-	mood swings are pretty common.
-
-	With that information, we'll need to revisit the getTea
-	function. We can modify getTea to accept a function as
-	a parameter to be able to change the type of tea it
-	prepares. This makes getTea more flexible, and gives 
-	the programmer more control when client requests 
-	change.
-
-	But first, let's cover some functinal terminology:
-
-	Callbacks: are functions that are slipped or passed
-	into another function to decide the invocation of that
-	function. You may have seen them passed to another
-	methods, for example in filter, the callback function 
-	tells JavaScript the criteria for how to filter an ar-
-	ray. 
-
-	Functions that can be assigned to a variable, passed 
-	into another function, or returned from another 
-	function just like any other normal value. are called
-	first class functinos. In JavaScript. all funcitons are 
-	first class functions. 
-
-	The functions that take a funcitno as an argument, or
-	return a function as a return valire are called higher 
-	order functions.
-
-	When the functions are passed in to another function 
-	or returned from another function, then those which gets
-	passed in or returned can be called a lambda.
---------------------------------------------------------- */
+const tea4TeamFCC = getTea(40);                                       
+                                                                            
+console.log(tea4TeamFCC);                                             
+                                                                            
+/*****************************************************************************
+ * FUNCTIONAL PROGRAMMING: UNDERSTAND FP TERMINOLAGY                         *
+ *                                                                           *
+ * The FCC Team had a mood swing and now wants two types of tea: green tea   *
+ * and black tea. General Fact: Client mood swings are pretty common.        *
+ *                                                                           * 
+ * With that information, we'll need to revisit the getTea function. We can  *
+ * modify getTea to accept a function as a parameter to be able to change    *
+ * the type of tea it prepares. This makes getTea more flexible, and gives   * 
+ * the programmer more control when client requests change.                  *
+ *                                                                           *
+ * But first, let's cover some functinal terminology:                        *
+ *                                                                           *
+ * Callbacks: are functions that are slipped or passed into another function *
+ * to decide the invocation of that function. You may have seen them passed  *
+ * to another methods, for example in filter, the callback function tells    *
+ * JavaScript the criteria for how to filter an array.                       * 
+ *                                                                           *
+ * Functions that can be assigned to a variable, passed  into another        *
+ * function, or returned from another function just like any other normal    *
+ * value. are called first class functinos. In JavaScript. all funcitons are * 
+ * first class functions.                                                    *
+ *                                                                           *
+ * The functions that take a funcitno as an argument, or return a function   *
+ * as a return valire are called higher order functions.                     *
+ *                                                                           *
+ * When the functions are passed in to another function or returned from     *
+ * another function, then those which getspassed in or returned can be called*
+ * a lambda.                                                                 *
+ *****************************************************************************/
 
 const prepareGreenTea = () => 'greenTea';
 const prepareBlackTea = () => 'blackTea';
 
-const getTeaOptions = (prepareTea, numOfCups) => {
-	const teaCups = [];
+const getTeaOptions = (prepareTea, numOfCups) => 
+{
+    const teaCups = [];
 
-	for(let cups = 1; cups <= numOfCups; cups++){
-		const teaCup = prepareTea();
-		teaCups.push(teaCup);
-	}
+    for(let cups = 1; cups <= numOfCups; cups++)
+    {
+        const teaCup = prepareTea();
+        teaCups.push(teaCup);
+    }
 
 	return teaCups;
 };   
@@ -101,109 +99,99 @@ const getTeaOptions = (prepareTea, numOfCups) => {
 let tea4GreenTeamFCC = getTeaOptions(prepareGreenTea, 27);
 let tea4BlackTeamFCC = getTeaOptions(prepareBlackTea, 13);
 
-console.log("Number of black teas are " + 
-    tea4BlackTeamFCC.length + ".");
-console.log("Number of green teas are " + 
-	tea4GreenTeamFCC.length + ".");
+console.log("Number of black teas are " + tea4BlackTeamFCC.length + ".");
+console.log("Number of green teas are " + tea4GreenTeamFCC.length + ".");
 
-/* ---------------------------------------------------------
-FUNCTIONAL PROGRAMMING: UNDERSTAND THE HAZARDS OF USING IM-
-PERATIVE CODE
+/*****************************************************************************
+ * FUNCTIONAL PROGRAMMING: UNDERSTAND THE HAZARDS OF USING IMPERATIVE CODE   *
+ *                                                                           *
+ * FP is a good habit. It keeps your code easy to manage, and saves you from *
+ * sneaky bugs. But before we get there. let's look at an imperative approach* 
+ * to programming to highlight where you may have issues.                    *
+ *                                                                           *
+ * In English (and many other languages), the imperative tense is used to    *
+ * give commands. Similarly, an imperative style in programming is one that  *
+ * gives the computer a set of statements to perform a task.                 *
+ *                                                                           *
+ * Often the statements change the state of the program, like updating global* 
+ * variables. A classic example i writing a for loop that gives exact        *
+ * directions to iterate over the indices of an array.                       *
+ *                                                                           *
+ * In contrast, FP is a form of declarative programming. You tell the        *
+ * computer what you want done by calling a method or a function.            *
+ *                                                                           *
+ * JavaScript offers many predifined methods that handle common tasks so you * 
+ * don't need to write out how the computer should perform them. For example,* 
+ * instead of using the for loop, you should call the map method which       *
+ * handles the details of iterating over an array. This helps to avoid       *
+ * semantic errors, like the "OffByOneErros" that were covered in the        *
+ * Debugging section.                                                        *
+ *                                                                           *
+ * Consider the scenario: you are browsing the web in your browser, and want *
+ * to track the tabs you have opened. Let's try to model this using some     *
+ * simple object-oriented code.                                              *
+ *                                                                           *
+ * A window object is made up of tabs, and you usually more than one window  *
+ * open. The titles of each site in each Window object is held in an array.  *
+ * After working in the browser (opening new tabs, merging windows, and      *
+ * closing tabs), you want to print the tabs that are still open. Closed tabs* 
+ * are removed from the array and nw tabs (for simplicitye) get added to the *
+ * end of it.                                                                *
+ *                                                                           *
+ * The code editor shows an implementation of this functionality with        *
+ * functions for tabOpen(), tabClose(), and join(). The array tabs is part of*
+ * the Window object that stores the name of the open pages.	             *
+ *****************************************************************************/
 
-FP is a good habit. It keeps your code easy to manage, and 
-saves you from sneaky bugs. But before we get there. let's
-look at an imperative approach to programming to highlight 
-where you may have issues.
+/* Creating the objet named Window, which has essencially the array with all 
+   opened tabs. This means that we nebasically an instance named tabs to 
+   allocate this array*/
 
-In English (and many other languages), the imperative 
-tense is used to give commands. Similarly, an imperative
-style in programming is one that gives the computer a set
-of statements to perform a task.
-
-Often the statements change the state of the program, like
-updating global variables. A classic example i writing a 
-for loop that gives exact directions to iterate over the 
-indices of an array.
-
-IN contrast, FP is a form of declarative programming. You 
-tell the computer what you want done by calling a method 
-or a function.
-
-JavaScript offers many predifined methods that handle 
-common tasks so you don't need to write out how the com-
-puter should perform them. For example, instead of using
-the for loop, you should call the map method which handles
-the details of iterating over an array. This helps to 
-avoid semantic errors, like the "OffByOneErros" that were 
-covered in the Debugging section.
-
-Consider the scenario: you are browsing the web in your 
-browser, and want to track the tabs you have opened. Let's
-try to model this using some simple object-oriented code.
-
-A window object is made up of tabs, and you usually more 
-than one window open. The titles of each site in each 
-Window object is held in an array. After working in the 
-browser (opening new tabs, merging windows, and closing
-tabs), you want to print the tabs that are still open. 
-Closed tabs are removed from the array and nw tabs (for 
-simplicitye) get added to the end of it.
-
-The code editor shows an implementation of this functio-
-nality with functions for tabOpen(), tabClose(), and 
-join(). The array tabs is part of the Window object that 
-stores the name of the open pages.	
---------------------------------------------------------- */
-
-// Creating the objet named Window, which has essencially //
-// the array with all opened tabs. This means that we ne- //
-// basically an instance named tabs to allocate this array//
-
-var Window = function(tabs){
-	
-	this.tabs = tabs;
+var Window = function(tabs)
+{	
+    this.tabs = tabs;
 }
 
-// Now, we want a method to join or merge different lists//
-// of opened tabs. So, the  Parent Object has a property //
-// such that a Child Object can receive another Child    //
-// Object and concacnate the first with the second.      //
+/* Now, we want a method to join or merge different lists of opened tabs. So, 
+   the  Parent Object has a property such that a Child Object can receive 
+   another Child Object and concacnate the first with the second. */
 
-Window.prototype.join = function(otherWindow){
+Window.prototype.join = function(otherWindow)
+{	
+    this.tabs = this.tabs.concat(otherWindow.tabs);
 	
-	this.tabs = this.tabs.concat(otherWindow.tabs);
-	
-	return this;
+    return this;
 };
 
-// The tabOpen will just open a new fresh tab             //
+/* The tabOpen will just open a new fresh tab */
 
 Window.prototype.tabOpen = function(tab){
-	this.tabs.push('new tab');
-	return this;
+    this.tabs.push('new tab');
+    return this;
 };
 
-// tabClose will split the tab array into two parts: befo-//
-// the tab we adressed to close and after this tab. Then, //
-// we build a new array with just these two parts and     //
-// assignment it to our tab variable.                     //
+/* tabClose will split the tab array into two parts: before the tab we adressed 
+   to close and after this tab. Then,we build a new array with just these two 
+   parts and assignment it to our tab variable. */
 
-Window.prototype.tabClose = function(index){
+Window.prototype.tabClose = function(index)
+{
+    this.tabs.splice(index,1);
 
-	this.tabs.splice(index,1);
-
-	return this;
+    return this;
 };
 
-// Now let's create a work browser window:                //
+/* Now let's create a work browser window: */
 
-var workWindow = new Window([
-	'GMail', 
-	'Inbox', 
-	'Work mail', 
-	'Docs', 
-	'freeCodeCamp'
-]);
+var workWindow = new Window(
+    [
+      'GMail', 
+      'Inbox', 
+      'Work mail', 
+      'Docs', 
+      'freeCodeCamp'
+    ]
+);
 
 // Then a social media browser window:                     //
 
